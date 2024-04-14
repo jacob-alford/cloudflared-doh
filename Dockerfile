@@ -16,7 +16,8 @@ EXPOSE 49312/tcp
 
 # RUN cloudflared --no-autoupdate --version
 
-CMD [ "proxy-dns" ]
+ENTRYPOINT ["cloudflared", "--no-autoupdate"]
+CMD ["proxy-dns"]
 
 HEALTHCHECK --interval=30s --timeout=20s --start-period=10s \
   CMD dig +short @127.0.0.1 -p $TUNNEL_DNS_PORT cloudflare.com A || exit 1
