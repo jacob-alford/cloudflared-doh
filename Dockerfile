@@ -1,4 +1,4 @@
-FROM cloudflare/cloudflared:latest
+FROM cloudflare/cloudflared:latest-amd64
 
 ENV TUNNEL_METRICS="0.0.0.0:49312" \
   TUNNEL_DNS_ADDRESS="0.0.0.0" \
