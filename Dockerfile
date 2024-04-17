@@ -15,7 +15,7 @@ ENV TUNNEL_METRICS="0.0.0.0:49312" \
   IPV6_DNS_ADDRESS_2="2606:4700:4700::1003" 
 
 
-ENV TUNNEL_DNS_UPSTREAM="https://$IPV4_DNS_ADDRESS_1/dns-query,https://$IPV4_DNS_ADDRESS_2/dns-query,https://$IPV6_DNS_ADDRESS_1/dns-query,https://$IPV6_DNS_ADDRESS_2/dns-query"
+ENV TUNNEL_DNS_UPSTREAM="https://$IPV4_DNS_ADDRESS_1/dns-query,https://$IPV4_DNS_ADDRESS_2/dns-query,https://[$IPV6_DNS_ADDRESS_1]/dns-query,https://[$IPV6_DNS_ADDRESS_2]/dns-query"
 
 EXPOSE 5053/udp
 EXPOSE 49312/tcp
